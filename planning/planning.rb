@@ -38,19 +38,16 @@ Problems
 
 ROLES
 #####
+class Game
+  - variables
+    - player tracker (stores hashes of each player) -> Array of Hashes [{}]
+      - lives tracker (game ends when a player has lives = 0) -> Integer
+      - player # -> Integer
+      - player name? -> String
+    - score tracker -> Integer
+    - current_player (after each question, player who answers swaps) -> Integer
+    - current_turn -> Integer
 
-class Player
-  - variables 
-    - individual lives (start at 3, decrease by 1 on incorrect answer) -> Integer
-    - individual score (start at 0, increase by 1 on correct answer) -> Integer
-    - class player tracker (stores hashes of each player) -> Array of Hashes [{}]
-      - class lives tracker (game ends when a player has lives = 0) -> Integer
-      - class player # -> Integer
-      - class player name? -> String
-      - class score tracker -> Integer
-    - class current_player (after each question, player who answers swaps) -> Integer
-    - class current_turn -> Integer
-  
   - methods (public)
     - start game (
       - set_up
@@ -96,6 +93,14 @@ class Player
       - puts response - correct/incorrect
       - change current player
     )
+
+class Player
+  - variables 
+    - individual lives (start at 3, decrease by 1 on incorrect answer) -> Integer
+    - individual score (start at 0, increase by 1 on correct answer) -> Integer
+
+  
+  
 
 class Problem
   - variables
