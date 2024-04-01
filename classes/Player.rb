@@ -6,7 +6,6 @@ class Player
     @id = id
     @lives = 3
     @score = 0
-    
   end
 
   def lose_life
@@ -16,7 +15,6 @@ class Player
   def increase_score
     @score += 1
   end
-
 
 end
 
